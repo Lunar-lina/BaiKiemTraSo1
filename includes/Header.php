@@ -16,29 +16,30 @@
 				<a class="nav-link" onclick="window.location.href='index.php'">
 				 Welcome
 				</a>
-				<a class="nav-link" onclick="window.location.href='Homepage.php'">
-				 Homepage
+				<a class="nav-link" onclick="window.location.href='Contact.php'">
+				 Contact
 				</a>
                 <a>
                     <img src="images/what.png" height="100px" width="100px"></img>
                 </a>
-				<a class="nav-link" onclick="window.location.href='index.php'">
+				<a class="nav-link" onclick="window.location.href='Dashboard.php'">
 				 Product
 				</a>
                 <?php 
                 $username = isset($_COOKIE['username']);
                 $error = [];
                 if (empty($username)) {
-                    $error["username"] = "Login/Sign in"; 
-                    $error["link"] = "Login.php";
+                    $error["username2"] = "Sign In"; 
+                    $error["link"] = "Register.php";
                   } else {
-                    $error["username"] = "Account";
+                    $error["username2"] = "Account";
                     $error["link"] = "Dashboard.php";
                   }
                 ?>        
-				<a class="nav-link" onclick="window.location.href='<?php $error["link"] ?>'">
-                <?php echo $error["username"] ?? ""; ?>
+				<a class="nav-link" onclick="window.location.href='<?php echo $error["link"]; ?>'">
+                <?php echo $error["username2"] ?? "error"; ?>
 				</a>
+				
 			  </div>
 			 </div>
 			</div>

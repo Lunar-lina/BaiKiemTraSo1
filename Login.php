@@ -24,7 +24,7 @@
 
     if (empty($error) && $email == $mail && $password == $pass) {
       $error["success"] = "Đăng Nhập Thành Công";
-      header('Location:./Homepage.html');
+      header('Location:./Dashboard.php');
     }
     
   }
