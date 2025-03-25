@@ -6,7 +6,7 @@
     while (isset($_COOKIE["product" . $counter])) {
         $counter++;
     }
-    $product[$counter1] = isset($_COOKIE["product" . $counter1])
+    $product[$counter] = isset($_COOKIE["product" . $counter]);
 }
 
 function setPriceCookie($price) {
@@ -14,7 +14,7 @@ function setPriceCookie($price) {
   while (isset($_COOKIE["price" . $counter1])) {
       $counter1++;
   }
-  $price[$counter1] = isset($_COOKIE["price" . $counter1])
+  $price[$counter1] = isset($_COOKIE["price" . $counter1]);
 }
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,7 +24,7 @@ function setPriceCookie($price) {
 
      if (empty($product)) {
       $error["product"] = "Vui Lòng Nhập Tên Sản Phẩm";
-    } elseif (setProductCookie($product) = $product) {
+    } elseif (setProductCookie($product) == $product) {
       setcookie($cookieName, $product, time() + (86400 * 30), "/");
   }
 
@@ -32,7 +32,7 @@ function setPriceCookie($price) {
       $error["price"] = "Vui lòng nhập Giá."; 
     } elseif ($price < 1000) {
       $error["price"] = "Vui lòng nhập Giá cao hơn 1000";
-    } elseif (setProductCookie($price) = $price) {
+    } elseif (setProductCookie($price) == $price) {
       setcookie($cookieName2, $price, time() + (86400 * 30), "/");
     }
 
@@ -53,8 +53,8 @@ function setPriceCookie($price) {
   </head>
   <body>
   
-    <div class="wrapper fade-in-down" style="margin-top: 100px;">
-      <div id="form-content">
+    <div class="wrapper" style="margin-top: 100px;">
+      <div id="form-content" class="fade-in second">
         <a href="./register.php">
           <h2 class="active">Chỉnh Sửa Sản Phẩm</h2>
         </a>

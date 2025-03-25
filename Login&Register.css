@@ -160,7 +160,7 @@ input[type=text]:placeholder {
 
 @-webkit-keyframes fadeInDown {
     0% {
-        opacity: 0;
+        opacity: 0.5;
         transform: translate3d(0, -100%, 0);
     }
 
@@ -172,7 +172,7 @@ input[type=text]:placeholder {
 
 @keyframes fadeInDown {
     0% {
-        opacity: 0;
+        opacity: 0.5;
         transform: translate3d(0, -100%, 0);
     }
 

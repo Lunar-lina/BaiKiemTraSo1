@@ -59,8 +59,8 @@ function setPriceCookie($price) {
   </head>
   <body>
   
-    <div class="wrapper fade-in-down" style="margin-top: 100px;">
-      <div id="form-content">
+    <div class="wrapper" style="margin-top: 100px;">
+      <div id="form-content" class="fade-in second">
         <a href="./register.php">
           <h2 class="active">Tạo Sản Phẩm</h2>
         </a>

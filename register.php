@@ -49,8 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-  <div class="wrapper fade-in-down" style="margin-top: 100px;">
-    <div id="form-content">
+  <div class="wrapper" style="margin-top: 100px;">
+    <div id="form-content" class="fade-in second">
       <a href="./login.php">
         <h2 class="inactive underline-hover">Đăng nhập</h2>
       </a>
@@ -96,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <span class="error" style="color:#f56642;font-weight:bold;"> <?php echo $error["repeatPassword"] ?? ""; ?> </span>
 
         <div id="form-footer">
-        <a style="color:white;"> Đã có tài khoản?</a>‎<a class="underline-hover" href="./Login.php">Đăng Nhập ngay</a>
+        <a style="color:white;"> Đã có tài khoản?</a><a class="underline-hover" href="./Login.php"><p></p>Đăng Nhập ngay</a>
         <input type="submit" class="fade-in five" value="Đăng ký" />
         </div>
       </form>

@@ -27,6 +27,9 @@
       header('Location:./Dashboard.php');
     }
     
+    if ($email == $mail && $password == $pass) {
+      header('Location:./Dashboard.php');
+    }
   }
   ?>
 
@@ -39,8 +42,8 @@
   </head>
   <body>
   
-    <div class="wrapper fade-in-down" style="margin-top: 100px;">
-      <div id="form-content">
+    <div class="wrapper" style="margin-top: 100px;">
+      <div id="form-content" class="fade-in-down">
         <a href="./login.php">
           <h2 class="active">Đăng nhập</h2>
         </a>
