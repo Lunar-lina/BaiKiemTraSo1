@@ -41,7 +41,7 @@
     class="fade-in third"
     style="overflow:hidden; resize:none;border: 6px solid rgba(246, 246, 246, 0);border-radius: 5px;font-size: 1rem;text-align: left;text-decoration: none;display: inline-block;padding: 2px"
     rows="10"
-    cols="42"
+    cols="35%"
     wrap="soft"
 ></textarea>
           <input type="submit" class="fade-in five" value="Gửi Tin Nhắn" />
