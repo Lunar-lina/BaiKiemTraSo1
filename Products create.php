@@ -1,26 +1,16 @@
 
   <?php 
   require('./includes/Header.php');
-  function setProductCookie($product) {
+  function setProductCookie($product,$price) {
     $counter = 1;
     while (isset($_COOKIE["product" . $counter])) {
         $counter++;
     }
     $cookieName = "product" . $counter;
-    setcookie($cookieName, $product, time() + (86400 * 30), "/");
+    $cookieData = "$product,$price";
+    setcookie($cookieName, $cookieData , time() + (86400 * 30), "/");
     $product = " ";
 }
-
-function setPriceCookie($price) {
-  $counter1 = 1;
-  while (isset($_COOKIE["price" . $counter1])) {
-      $counter1++;
-  }
-  $cookieName2 = "price" . $counter1;
-  setcookie($cookieName2, $price, time() + (86400 * 30), "/");
-  $product = " ";
-}
- 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
      $error = [];
      $product = htmlspecialchars($_POST["Product"]);
@@ -28,19 +18,17 @@ function setPriceCookie($price) {
 
      if (empty($product)) {
       $error["product"] = "Vui Lòng Nhập Tên Sản Phẩm";
-    } else {
-    setProductCookie($product);
-    $product = " ";
-  }
-
-    if (empty($price)) {
+    } elseif (empty($price)) {
       $error["price"] = "Vui lòng nhập Giá."; 
     } elseif ($price < 1000) {
       $error["price"] = "Vui lòng nhập Giá cao hơn 1000";
     } else {
-      setPriceCookie($price);
-      $price = " ";
-    }
+    setProductCookie($product,$price);
+    $product = " ";
+    $price = " ";
+  }
+
+    
 
     if (empty($error)) {
       $product = " ";
@@ -51,10 +39,8 @@ function setPriceCookie($price) {
   ?>
 
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./Login&Register.css" />
-    <link rel="stylesheet" href="./FPstyle.css" />
+    <link rel="stylesheet" href="style/Login&Register.css" />
+    <link rel="stylesheet" href="style/FPstyle.css" />
     <title>Login Page</title>
   </head>
   <body>

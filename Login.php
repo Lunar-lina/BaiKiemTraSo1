@@ -1,8 +1,10 @@
 
+ <?php require('./includes/Header.php'); ?>
   <?php 
+  
   $pass = isset($_COOKIE['password']);
   $mail = isset($_COOKIE['email']);
-  require('./includes/Header.php');
+
 
  
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -34,16 +36,14 @@
   ?>
 
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./Login&Register.css" />
-    <link rel="stylesheet" href="./FPstyle.css" />
+    <link rel="stylesheet" href="style/Login&Register.css" />
+    <link rel="stylesheet" href="style/FPstyle.css" />
     <title>Login Page</title>
   </head>
   <body>
   
     <div class="wrapper" style="margin-top: 100px;">
-      <div id="form-content" class="fade-in-down">
+      <div id="form-content" class="fade-in second">
         <a href="./login.php">
           <h2 class="active">Đăng nhập</h2>
         </a>
@@ -76,7 +76,7 @@
         </form>
 
         <div id="form-footer">
-          <a style="color:white;"> Chưa có tài khoản?</a>‎ <a class="underline-hover" href="./Register.php">Đăng Ký ngay</a>
+          <a style="color:white;"> Chưa có tài khoản?-</a><a class="underline-hover" href="./Register.php">Đăng Ký ngay</a>
           
         </div>
       </div>

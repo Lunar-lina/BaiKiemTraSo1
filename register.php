@@ -41,10 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./Login&Register.css" />
-  <link rel="stylesheet" href="./FPstyle.css" />
+  <link rel="stylesheet" href="style/Login&Register.css" />
+  <link rel="stylesheet" href="style/FPstyle.css" />
   <title>Register Page</title>
 </head>
 
@@ -96,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <span class="error" style="color:#f56642;font-weight:bold;"> <?php echo $error["repeatPassword"] ?? ""; ?> </span>
 
         <div id="form-footer">
-        <a style="color:white;"> Đã có tài khoản?</a><a class="underline-hover" href="./Login.php"><p></p>Đăng Nhập ngay</a>
+        <a style="color:white;"> Đã có tài khoản?-</a><a class="underline-hover" href="./Login.php"><p></p>Đăng Nhập ngay</a>
         <input type="submit" class="fade-in five" value="Đăng ký" />
         </div>
       </form>
