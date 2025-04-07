@@ -26,6 +26,7 @@
     setProductCookie($product,$price);
     $product = " ";
     $price = " ";
+    header('Location:./Products index.php');
   }
 
     

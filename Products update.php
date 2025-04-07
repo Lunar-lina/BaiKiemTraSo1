@@ -38,7 +38,8 @@ function setPriceCookie($price) {
 
     if (empty($error)) {
       $product = " ";
-      $error["success"] = "Tạo Thành Công";
+      $error["success"] = "Sửa thành công";
+      header('Location:./Products index.php');
     }
     
   }
