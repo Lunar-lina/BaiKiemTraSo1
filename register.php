@@ -34,9 +34,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   if (empty($error)) {
     $username = $email = $password = $repeatPassword = "";
-    Header('location:./login.php');
+    Header('location:./Dashboard.php');
   }
   
+}
+if (empty($username)) {
+} else {
+  header('Location:./Dashboard.php');
 }
 ?>
 
@@ -52,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <a href="./login.php">
         <h2 class="inactive underline-hover">Đăng nhập</h2>
       </a>
-      <a href="./register.php">
+      <a href="./register.php" style="pointer-events: none;cursor: default;">
         <h2 class="active">Đăng ký</h2>
       </a>
 
@@ -93,9 +97,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           value="<?php echo isset($repeatPassword) ? $repeatPassword : ''; ?>" ; />
         <span class="error" style="color:#f56642;font-weight:bold;"> <?php echo $error["repeatPassword"] ?? ""; ?> </span>
 
+        <input type="submit" class="fade-in five" value="Đăng ký" /><br>
         <div id="form-footer">
         <a style="color:white;"> Đã có tài khoản?-</a><a class="underline-hover" href="./Login.php"><p></p>Đăng Nhập ngay</a>
-        <input type="submit" class="fade-in five" value="Đăng ký" />
         </div>
       </form>
     </div>

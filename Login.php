@@ -4,7 +4,7 @@
   
   $pass = isset($_COOKIE['password']);
   $mail = isset($_COOKIE['email']);
-
+$username = isset($_COOKIE['username']);
 
  
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -33,6 +33,11 @@
       header('Location:./Dashboard.php');
     }
   }
+  if (empty($username)) {
+
+  } else {
+    header('Location:./Dashboard.php');
+  }
   ?>
 
   <head>
@@ -45,7 +50,7 @@
     <div class="wrapper" style="margin-top: 100px;">
       <div id="form-content" class="fade-in second">
         <a href="./login.php">
-          <h2 class="active">Đăng nhập</h2>
+          <h2 class="active" style="pointer-events: none;cursor: default;">Đăng nhập</h2>
         </a>
         <a href="./register.php">
           <h2 class="inactive underline-hover">Đăng ký</h2>

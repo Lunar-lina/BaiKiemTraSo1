@@ -103,7 +103,8 @@ input[type=submit],
 input[type=reset] {
     background-color: var(--Fourth-color);
     border: none;
-    color: white;
+    color: #333333;
+    font-weight: bold;
     padding: 1rem 4rem;
     text-align: center;
     width: 100%;
@@ -128,7 +129,7 @@ input[type=email],
 input[type=password] {
     background-color: #f6f6f6;
     border: none;
-    color: #070707;
+    color: #333333;
     padding: 1rem 1.5rem;
     text-align: center;
     text-decoration: none;
